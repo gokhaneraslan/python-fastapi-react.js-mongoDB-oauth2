@@ -1,0 +1,129 @@
+
+
+.inputCard{
+    position: relative;
+    width: 18rem;
+    height: 2.5rem;
+    padding-left: 1rem;
+    margin-top: 0.7rem;
+    background: #3d4f7c;
+    flex-direction: column;
+    border-radius: 10px;
+    border-width: 1px;
+    border-color: #3d4f7c;
+    border-style: solid;
+    color: white;
+    
+}
+
+.formClass{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-top: 3rem ;
+    color: #fff;
+    font-size: small;
+}
+
+
+.formClass h1{
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.btn_group{
+    width: 18rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row;
+    margin-top: 1rem;
+    padding: .5rem .5rem;
+}
+
+.buttonSend{
+    width: 8rem;
+    height: 2.5rem;
+    background-color: rgba(255, 255, 255, 0.05);
+    border-color: #3d4f7c;
+    border-width: 1px;
+    border-radius: 2rem;
+    color: white;
+    cursor: pointer;
+}
+
+.buttonSend:hover{
+    background-color: #323e5e;
+}
+
+.buttonClear{
+    width: 8rem;
+    height: 2.5rem;
+    background-color: rgba(255, 255, 255, 0.05);
+    border-color: #3d4f7c;
+    border-width: 1px;
+    border-radius: 2rem;
+    color: white;
+    cursor: pointer;
+}
+
+.buttonClear:hover{
+    background-color: #323e5e;
+}
+
+.text-white{
+    font-family: sans-serif;
+    font-weight: 500;
+}
+
+.welcome{
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: sans-serif;
+    font-weight: 500;
+}
+
+.p_btn{
+    display: flex;
+    justify-content: space-between;
+    font-family: sans-serif;
+    font-weight: 500;
+    font-size: 14px;
+    text-decoration: none;
+    color: #fff;
+}
+
+.link_btn{
+    text-decoration: none;
+    color: #fff;
+    margin-left: 1.5rem;
+}
+
+.link_btn:hover{
+    scale: 1.5;
+    color: rgb(0, 0, 20);
+}
+
+.blue-glassmorphism {
+    background: rgb(39, 51, 89, 0.4);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.2);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    border: 1px solid rgba(0, 0, 0, 0.3);
+}
+  
+.white-glassmorphism {
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 16px;
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+}
+  
+
