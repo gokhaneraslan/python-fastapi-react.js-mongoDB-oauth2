@@ -8,9 +8,9 @@ services:
       - mongo_db:/data/db
     restart: always
 
-  hello_server:
+  server:
     build: ./server
-    container_name: hello_compose_server
+    container_name: compose_server
     volumes:
       - ./server:/code
     ports:
@@ -19,16 +19,16 @@ services:
     depends_on:
       - mongo_db
 
-  hello_client:
+  client:
     build: ./client
-    container_name: hello_compose_client
+    container_name: compose_client
     volumes:
       - ./client:/app
     ports:
       - 3000:3000
     restart: always
     depends_on:
-      - hello_server
+      - server
 
 volumes:
   mongo_db: {}
