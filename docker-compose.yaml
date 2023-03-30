@@ -3,10 +3,27 @@ version: "3.1"
 services:
   mongo_db:
     image: mongo:4.2
-    container_name: db_container
+    container_name: mongo_db_container
+    ports:
+      - 27017:27017
+    environment:
+      - MONGO_INITDB_ROOT_USERNAME=root
+      - MONGO_INITDB_ROOT_PASSWORD=password
     volumes:
       - mongo_db:/data/db/
+    networks:
+      - mongo-net
     restart: always
+
+  mongo_web:
+    image: mongo-express:0.54
+    container_name: mongo_express_container
+    environment:
+      - ME_CONFIG_MONGODB_ADMINUSERNAME= root
+      - ME_CONFIG_MONGODB_ADMINPASSWORD= password
+      - ME_CONFIG_MONGODB_SERVER= mongo_db
+    networks:
+      - mongo-net
 
   server:
     container_name: app_server
@@ -19,6 +36,12 @@ services:
     restart: always
     depends_on:
       - mongo_db
+      - mongo_web
+
+networks:
+  mongo-net:
+    name: mongo-net
 
 volumes:
-  mongo_db: {}
+  mongo_db:
+    name: mongo_db
