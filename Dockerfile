@@ -1,11 +1,15 @@
-FROM node:18.15.0
+FROM node:18-alpine AS Production
+
+ENV NODE_ENV=production
 
 WORKDIR /app
 
-COPY /package.json /app/
+COPY ["/package.json", "/package-lock.json", "/app/"]
 
 RUN npm install
 
 COPY . /app/
 
-CMD ["npm", "start"]
+RUN npm run build
+
+CMD ["sh", "-c", "npm start"]
