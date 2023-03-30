@@ -53,7 +53,7 @@ const Login = () => {
         }
         if (res.data.status_code === 200){
           setUser(res.data.detail)
-          navigate("/home")
+          navigate("/home", { replace: true })
         }
       })
       .catch((err) => {
