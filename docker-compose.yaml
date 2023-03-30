@@ -5,12 +5,13 @@ services:
     image: mongo:4.2
     container_name: db_container
     volumes:
-      - mongo_db:/data/db
+      - mongo_db:/data/db/
     restart: always
 
-  hello_server:
+  server:
+    container_name: app_server
+    image: api_server:1.0.0
     build: ./server
-    container_name: hello_compose_server
     volumes:
       - ./server:/code
     ports:
